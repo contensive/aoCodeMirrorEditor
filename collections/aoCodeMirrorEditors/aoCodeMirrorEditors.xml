@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="windows-1252"?>
-<Collection name="CodeMirror Editors" guid="{73121366-107D-4C4B-8F89-A4DE518FA316}" system="No" updatable="Yes">
+<Collection name="Code Mirror Editors" guid="{73121366-107D-4C4B-8F89-A4DE518FA316}" system="No" updatable="Yes">
 	<Help></Help>
 	<Addon name="CodeMirror Html Editor" guid="{A63ED2BC-1523-41BD-B3B0-A4450944DD26}" type="Add-on">
 		<Copy></Copy>
@@ -52,17 +52,19 @@
 
 ]]></Styles>
 		<Scripting Language="JScript" EntryPoint="m" Timeout="5000">
-		<Code><![CDATA[function m() {
-  var s,editorName,editorValue;
-  editorName=cp.doc.Var('editorName');
-  editorValue=cp.doc.Var('editorValue');
-  editorValue=cp.utils.encodeHtml(editorValue);
-  s='<div class="codeMirrorJsEditor" style="border-top: 1px solid black; border-bottom: 1px solid black;background-color:white;"><textarea id="'+editorName+'" name="'+editorName+'" cols="120" rows="30">'+editorValue+'</text'+'area></div>';
-  s+='\n<script type="text/javascript">';
-  s+='\nvar editor = CodeMirror.fromTextArea("'+editorName+'", { height: "350px", parserfile: "parsexml.js", stylesheet: "/codeMirror/css/xmlcolors.css", path: "/codeMirror/js/", continuousScanning: 500, lineNumbers: true, autoMatchParens: true });'
-    s+='\n</script>'
-return s;
-}]]></Code>
+		<Code><![CDATA[
+			function m() {
+				var s,editorName,editorValue;
+				editorName=cp.Doc.GetText('editorName');
+				editorValue=cp.Doc.GetText('editorValue');
+				editorValue=cp.Utils.EncodeHtml(editorValue);
+				s='<div class="codeMirrorJsEditor" style="border-top: 1px solid black; border-bottom: 1px solid black;background-color:white;"><textarea id="'+editorName+'" name="'+editorName+'" cols="120" rows="30">'+editorValue+'</text'+'area></div>';
+				s+='\n<script type="text/javascript">';
+				s+='\nvar editor = CodeMirror.fromTextArea("'+editorName+'", { height: "350px", parserfile: "parsexml.js", stylesheet: "/codeMirror/css/xmlcolors.css", path: "/codeMirror/js/", continuousScanning: 500, lineNumbers: true, autoMatchParens: true });'
+				s+='\n</script>'
+				return s;
+			}
+]]></Code>
 		</Scripting>
 		<Editors>
 			<type>HTML File</type>
@@ -117,21 +119,21 @@ return s;
       }
 ]]></Styles>
 		<Scripting Language="JScript" EntryPoint="m" Timeout="5000">
-		<Code><![CDATA[function m() {
-  var s,editorName,editorValue;
-  editorName=cp.doc.Var('editorName');
-  editorValue=cp.doc.Var('editorValue');
-  editorValue=cp.utils.encodeHtml(editorValue);
-  s='<div class="codeMirrorJsEditor" style="border-top: 1px solid black; border-bottom: 1px solid black;background-color:white;"><textarea id="'+editorName+'" name="'+editorName+'" cols="120" rows="30">'+editorValue+'</text'+'area></div>';
-  s+='\n<script type="text/javascript">';
-  s+='\nvar editor = CodeMirror.fromTextArea("'+editorName+'", { height: "350px", parserfile: ["tokenizejavascript.js", "parsejavascript.js"], stylesheet: "/codeMirror/css/jscolors.css", path: "/codeMirror/js/", continuousScanning: 500, lineNumbers: true, autoMatchParens: true });'
-    s+='\n</script>'
-return s;
-}]]></Code>
+		<Code><![CDATA[
+			function m() {
+				var s,editorName,editorValue;
+				editorName=cp.Doc.GetText('editorName');
+				editorValue=cp.Doc.GetText('editorValue');
+				editorValue=cp.Utils.EncodeHtml(editorValue);
+				s='<div class="codeMirrorJsEditor" style="border-top: 1px solid black; border-bottom: 1px solid black;background-color:white;"><textarea id="'+editorName+'" name="'+editorName+'" cols="120" rows="30">'+editorValue+'</text'+'area></div>';
+				s+='\n<script type="text/javascript">';
+				s+='\nvar editor = CodeMirror.fromTextArea("'+editorName+'", { height: "350px", parserfile: ["tokenizejavascript.js", "parsejavascript.js"], stylesheet: "/codeMirror/css/jscolors.css", path: "/codeMirror/js/", continuousScanning: 500, lineNumbers: true, autoMatchParens: true });'
+				s+='\n</script>'
+				return s;
+			}
+]]></Code>
 		</Scripting>
 		<Editors>
-			<type>TextFile</type>
-			<type>LongText</type>
 			<type>Javascript File</type>
 		</Editors>
 	</Addon>
