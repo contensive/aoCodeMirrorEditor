@@ -165,4 +165,5 @@ s+='\n</script>'
 			<type>Javascript File</type>
 		</Editors>
 	</Addon>
+	<Resource name="codemirror.zip" type="www" path="" />
 </Collection>
