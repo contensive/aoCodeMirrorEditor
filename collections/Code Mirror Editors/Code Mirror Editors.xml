@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="windows-1252"?>
-<Collection name="Code Mirror Editors" guid="{73121366-107d-4c4b-8f89-a4de518fa316}" system="No" updatable="No" blockNavigatorNode="No" onInstallAddonGuid="">
+<Collection name="Code Mirror Editors" guid="{73121366-107d-4c4b-8f89-a4de518fa316}" system="No" updatable="Yes" blockNavigatorNode="No" onInstallAddonGuid="">
 	<HelpLink></HelpLink>
 	<Help></Help>
 	<Addon name="CodeMirror Html Editor" guid="{A63ED2BC-1523-41BD-B3B0-A4450944DD26}" type="Add-on">
@@ -42,41 +42,56 @@
 		<RemoteAssetLink></RemoteAssetLink>
 		<Styles><![CDATA[
 
-.CodeMirror-line-numbers {
-	padding-top: .45em ! important;
-	background-color: #eee ! important;
-}
-.CodeMirror-line-numbers div {
-	width: 2.2em ! important;
-	color: #aaa ! important;
-	background-color: #eee ! important;
-	text-align: right ! important;
-	padding-right: .3em ! important;
-	font-size: 10pt ! important;
-	font-family: monospace ! important;
-	line-height: normal ! important;
-}
-		
-]]></Styles>
+			.CodeMirror-line-numbers {
+				padding-top: .45em ! important;
+				background-color: #eee ! important;
+			}
+			.CodeMirror-line-numbers div {
+				width: 2.2em ! important;
+				color: #aaa ! important;
+				background-color: #eee ! important;
+				text-align: right ! important;
+				padding-right: .3em ! important;
+				font-size: 10pt ! important;
+				font-family: monospace ! important;
+				line-height: normal ! important;
+			}
+					
+			]]></Styles>
 		<styleslinkhref></styleslinkhref>
 		<Scripting Language="Javascript" EntryPoint="m" Timeout="5000">
 			<Code><![CDATA[
 
-function m() {
-var s,editorName,editorValue;
-editorName=cp.Doc.GetText('editorName');
-editorValue=cp.Doc.GetText('editorValue');
-editorValue=cp.Utils.EncodeHTML(editorValue);
-s='<div class="codeMirrorJsEditor" style="border-top: 1px solid black; border-bottom: 1px solid black;background-color:white;">'
-s+='\n<textarea id="'+editorName+'" name="'+editorName+'" cols="120" rows="30">'+editorValue+'</text'+'area>'
-s+='\n</div>';
-s+='\n<script type="text/javascript">';
-s+='\nvar editor = CodeMirror.fromTextArea("'+editorName+'", { height: "350px", parserfile: "parsexml.js", stylesheet: "/codeMirror/css/xmlcolors.css", path: "/codeMirror/js/", continuousScanning: 500, lineNumbers: true, autoMatchParens: true });'
-s+='\n</script>'
-	return s;
-}
+			function m() {
+				var s,editorName,editorValue;
+				editorName=cp.Doc.GetText('editorName');
+				editorValue=cp.Doc.GetText('editorValue');
+				editorValue=cp.Utils.EncodeHTML(editorValue);
 
-]]></Code>
+				// cp.Doc.AddHeadStyleLink("/codemirror-5.52.0/doc/docs.css")
+				cp.Doc.AddHeadStyleLink("/codemirror-5.52.0/lib/codemirror.css")
+				cp.Doc.AddHeadStyleLink("/codemirror-5.52.0/addon/hint/show-hint.css")
+
+				cp.Doc.AddHeadJavascript("/codemirror-5.52.0/lib/codemirror.js")
+				cp.Doc.AddHeadJavascript("/codemirror-5.52.0/addon/hint/show-hint.js")
+				cp.Doc.AddHeadJavascript("/codemirror-5.52.0/addon/hint/xml-hint.js")
+				cp.Doc.AddHeadJavascript("/codemirror-5.52.0/addon/hint/html-hint.js")
+				cp.Doc.AddHeadJavascript("/codemirror-5.52.0/mode/xml/xml.js")
+				cp.Doc.AddHeadJavascript("/codemirror-5.52.0/mode/javascript/javascript.js")
+				cp.Doc.AddHeadJavascript("/codemirror-5.52.0/mode/css/css.js")
+				cp.Doc.AddHeadJavascript("/codemirror-5.52.0/mode/htmlmixed/htmlmixed.js")
+				
+				s='';
+				s+='\n<div class="codeMirrorJsEditor" style="border-top: 1px solid black; border-bottom: 1px solid black;background-color:white;">'
+				s+='\n<textarea id="'+editorName+'" name="'+editorName+'" cols="120" rows="30">'+editorValue+'</text'+'area>'
+				s+='\n</div>';
+				s+='\n<script type="text/javascript">';
+				s+='\nvar editor = CodeMirror.fromTextArea("'+editorName+'", { height: "350px", parserfile: "parsexml.js", stylesheet: "/codeMirror/css/xmlcolors.css", path: "/codeMirror/js/", continuousScanning: 500, lineNumbers: true, autoMatchParens: true });'
+				s+='\n</script>'
+				return s;
+			}
+
+			]]></Code>
 		</Scripting>
 		<Editors>
 			<type>HTML Code</type>
@@ -88,8 +103,7 @@ s+='\n</script>'
 		<CopyText></CopyText>
 		<!-- deprecated --><ActiveXProgramID></ActiveXProgramID>
 		<DotNetClass></DotNetClass>
-		<ArgumentList><![CDATA[
-]]></ArgumentList>
+		<ArgumentList><![CDATA[]]></ArgumentList>
 		<AsAjax>No</AsAjax>
 		<Filter>No</Filter>
 		<Help></Help>
@@ -140,7 +154,7 @@ s+='\n</script>'
 			}
 
 		
-]]></Styles>
+			]]></Styles>
 		<styleslinkhref></styleslinkhref>
 		<Scripting Language="Javascript" EntryPoint="m" Timeout="5000">
 			<Code><![CDATA[
@@ -165,5 +179,5 @@ s+='\n</script>'
 			<type>Javascript File</type>
 		</Editors>
 	</Addon>
-	<Resource name="codemirror.zip" type="www" path="" />
+	<Resource name="codemirror-5.52.0.zip" type="www" path="" />
 </Collection>
