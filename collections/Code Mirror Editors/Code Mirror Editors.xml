@@ -72,14 +72,14 @@
 				cp.Doc.AddHeadStyleLink("/codemirror-5.52.0/lib/codemirror.css")
 				cp.Doc.AddHeadStyleLink("/codemirror-5.52.0/addon/hint/show-hint.css")
 
-				cp.Doc.AddHeadJavascript("/codemirror-5.52.0/lib/codemirror.js")
-				cp.Doc.AddHeadJavascript("/codemirror-5.52.0/addon/hint/show-hint.js")
-				cp.Doc.AddHeadJavascript("/codemirror-5.52.0/addon/hint/xml-hint.js")
-				cp.Doc.AddHeadJavascript("/codemirror-5.52.0/addon/hint/html-hint.js")
-				cp.Doc.AddHeadJavascript("/codemirror-5.52.0/mode/xml/xml.js")
-				cp.Doc.AddHeadJavascript("/codemirror-5.52.0/mode/javascript/javascript.js")
-				cp.Doc.AddHeadJavascript("/codemirror-5.52.0/mode/css/css.js")
-				cp.Doc.AddHeadJavascript("/codemirror-5.52.0/mode/htmlmixed/htmlmixed.js")
+				cp.Doc.AddHeadJavascriptLink("/codemirror-5.52.0/lib/codemirror.js")
+				cp.Doc.AddHeadJavascriptLink("/codemirror-5.52.0/addon/hint/show-hint.js")
+				cp.Doc.AddHeadJavascriptLink("/codemirror-5.52.0/addon/hint/xml-hint.js")
+				cp.Doc.AddHeadJavascriptLink("/codemirror-5.52.0/addon/hint/html-hint.js")
+				cp.Doc.AddHeadJavascriptLink("/codemirror-5.52.0/mode/xml/xml.js")
+				cp.Doc.AddHeadJavascriptLink("/codemirror-5.52.0/mode/javascript/javascript.js")
+				cp.Doc.AddHeadJavascriptLink("/codemirror-5.52.0/mode/css/css.js")
+				cp.Doc.AddHeadJavascriptLink("/codemirror-5.52.0/mode/htmlmixed/htmlmixed.js")
 				
 				s='';
 				s+='\n<div class="codeMirrorJsEditor" style="border-top: 1px solid black; border-bottom: 1px solid black;background-color:white;">'
