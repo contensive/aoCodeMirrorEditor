@@ -70,7 +70,6 @@
 		<BlockEditTools>No</BlockEditTools>
 		<IncludeAddon name="CodeMirror Common Include" guid="{597edb24-c2a0-4317-beec-ad25fd46eb73}"/>
 		<IsInline>No</IsInline>
-		<JavascriptInHead></JavascriptInHead>
 		<javascriptForceHead>No</javascriptForceHead>
 		<Content>No</Content>
 		<Template>No</Template>
@@ -194,7 +193,6 @@
 		<BlockEditTools>No</BlockEditTools>
 		<IncludeAddon name="CodeMirror Common Include" guid="{597edb24-c2a0-4317-beec-ad25fd46eb73}"/>
 		<IsInline>No</IsInline>
-		<JavascriptInHead></JavascriptInHead>
 		<javascriptForceHead>No</javascriptForceHead>
 		<Content>No</Content>
 		<Template>No</Template>
@@ -272,7 +270,7 @@
 		}]]></Styles>
 		<Scripting Language="Javascript" EntryPoint="m" Timeout="5000">
 			<Code><![CDATA[
-
+			
 			function m() {
 					var s,editorName,editorValue;
 					editorName=cp.Doc.GetText('editorName');
@@ -292,17 +290,16 @@
 					s += "<script type=\"text/javascript\">initCodeMirrorHtmlEditor(\"{3}\",{4})</script>";
 					s = s.replace("{0}", editorName);
 					s = s.replace("{1}", editorName);
-					s = s.replace("{2}", editorValue);
 					s = s.replace("{3}", editorName);
 					s = s.replace("{4}", (readOnly) ? "true" : "false");
+					s = s.replace("{2}", editorValue);
 					return s;
 				}
-				
-				]]></Code>
+			]]></Code>
 		</Scripting>
 		<Editors>
-			<type>Long Text</type>
-			<type>Text File</type>
+			<type>LongText</type>
+			<type>TextFile</type>
 		</Editors>
 	</Addon>
 	<Resource name="codemirror-5.52.0.zip" type="www" path="" />
