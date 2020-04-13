@@ -302,5 +302,60 @@
 			<type>TextFile</type>
 		</Editors>
 	</Addon>
+	<Addon name="CodeMirror Xml Editor" guid="{56a34edf-cf69-48c7-bac4-2b69dad519f8}" type="Add-on">
+		<AsAjax>No</AsAjax>
+		<Filter>No</Filter>
+		<Icon Link="" width="50" height="50" sprites="0" />
+		<InIframe>No</InIframe>
+		<BlockEditTools>No</BlockEditTools>
+		<IncludeAddon name="CodeMirror Common Include" guid="{597edb24-c2a0-4317-beec-ad25fd46eb73}"/>
+		<IsInline>No</IsInline>
+		<javascriptForceHead>No</javascriptForceHead>
+		<Content>No</Content>
+		<Template>No</Template>
+		<Email>No</Email>
+		<Admin>No</Admin>
+		<OnPageEndEvent>No</OnPageEndEvent>
+		<OnPageStartEvent>No</OnPageStartEvent>
+		<OnBodyStart>No</OnBodyStart>
+		<OnBodyEnd>No</OnBodyEnd>
+		<RemoteMethod>No</RemoteMethod>
+		<Diagnostic>No</Diagnostic>
+		<ProcessRunOnce>No</ProcessRunOnce>
+		<ProcessInterval>0</ProcessInterval>
+		<Scripting Language="Javascript" EntryPoint="m" Timeout="5000">
+			<Code><![CDATA[function m() {
+					var s,editorName,editorValue;
+					editorName=cp.Doc.GetText('editorName');
+					editorValue=cp.Doc.GetText('editorValue');
+					editorValue=cp.Utils.EncodeHTML(editorValue);
+					var readOnly=cp.Doc.GetBoolean("readOnly");
+					//
+					cp.Doc.AddHeadStyleLink("/codemirror-5.52.0/lib/codemirror.css");
+					cp.Doc.AddHeadStyleLink("/codemirror-5.52.0/addon/display/fullscreen.css");
+					cp.Doc.AddHeadStyleLink("/codemirror-5.52.0/theme/idea.css");
+					//
+					cp.Doc.AddHeadJavascriptLink("/codemirror-5.52.0/lib/codemirror.js");
+					cp.Doc.AddHeadJavascriptLink("/codemirror-5.52.0/addon/hint/show-hint.js");
+					cp.Doc.AddHeadJavascriptLink("/codemirror-5.52.0/addon/hint/xml-hint.js");
+					cp.Doc.AddHeadJavascriptLink("/codemirror-5.52.0/mode/xml/xml.js");
+					cp.Doc.AddHeadJavascriptLink("/codemirror-5.52.0/addon/display/fullscreen.js");
+					cp.Doc.AddHeadJavascriptLink("/codemirror-5.52.0/addon/display/autorefresh.js");
+					cp.Doc.AddHeadJavascriptLink("/codemirror-5.52.0/addon/selection/active-line.js");
+					//
+					s = "<div class=codeMirrorEditor><textarea id=\"{0}\" name=\"{1}\" rows=\"30\">{2}</textarea></div>";
+					s += "<script type=\"text/javascript\">initCodeMirrorHtmlEditor(\"{3}\",{4})</script>";
+					s = s.replace("{0}", editorName);
+					s = s.replace("{1}", editorName);
+					s = s.replace("{3}", editorName);
+					s = s.replace("{4}", (readOnly) ? "true" : "false");
+					s = s.replace("{2}", editorValue);
+					return s;
+				}]]></Code>
+		</Scripting>
+		<Editors>
+			<type>XML File</type>
+		</Editors>
+	</Addon>
 	<Resource name="codemirror-5.52.0.zip" type="www" path="" />
 </Collection>
