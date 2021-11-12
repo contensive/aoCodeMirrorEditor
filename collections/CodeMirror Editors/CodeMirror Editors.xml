@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="windows-1252"?>
-<Collection name="CodeMirror Editors" guid="{73121366-107d-4c4b-8f89-a4de518fa316}" system="No" updatable="Yes" blockNavigatorNode="No" onInstallAddonGuid="">
+<Collection name="CodeMirror Editors" guid="{73121366-107d-4c4b-8f89-a4de518fa316}" system="No" updatable="Yes" blockNavigatorNode="Yes" onInstallAddonGuid="">
 	<HelpLink></HelpLink>
 	<Help></Help>
 	<Addon name="CodeMirror Common Include" guid="{597edb24-c2a0-4317-beec-ad25fd46eb73}" type="Add-on">
