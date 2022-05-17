@@ -93,7 +93,7 @@
 					editorName=cp.Doc.GetText('editorName');
 					editorValue=cp.Doc.GetText('editorValue');
 					editorValue=cp.Utils.EncodeHTML(editorValue);
-					var readOnly=cp.Doc.GetBoolean("readOnly");
+					var readOnly=cp.Doc.GetBoolean("editorReadOnly");
 
 					// cp.Doc.AddHeadStyleLink("/codemirror-5.52.0/doc/docs.css");
 					cp.Doc.AddHeadStyleLink("/codemirror-5.52.0/lib/codemirror.css");
@@ -152,7 +152,7 @@
 					editorName=cp.Doc.GetText('editorName');
 					editorValue=cp.Doc.GetText('editorValue');
 					editorValue=cp.Utils.EncodeHTML(editorValue);
-					var readOnly=cp.Doc.GetBoolean("readOnly");
+					var readOnly=cp.Doc.GetBoolean("editorReadOnly");
 
 					// cp.Doc.AddHeadStyleLink("/codemirror-5.52.0/doc/docs.css");
 					cp.Doc.AddHeadStyleLink("/codemirror-5.52.0/lib/codemirror.css");
@@ -213,7 +213,7 @@
 					editorName=cp.Doc.GetText('editorName');
 					editorValue=cp.Doc.GetText('editorValue');
 					editorValue=cp.Utils.EncodeHTML(editorValue);
-					var readOnly=cp.Doc.GetBoolean("readOnly");
+					var readOnly=cp.Doc.GetBoolean("editorReadOnly");
 
 					// cp.Doc.AddHeadStyleLink("/codemirror-5.52.0/doc/docs.css");
 					cp.Doc.AddHeadStyleLink("/codemirror-5.52.0/lib/codemirror.css");
@@ -277,7 +277,7 @@
 					editorName=cp.Doc.GetText('editorName');
 					editorValue=cp.Doc.GetText('editorValue');
 					editorValue=cp.Utils.EncodeHTML(editorValue);
-					var readOnly=cp.Doc.GetBoolean("readOnly");
+					var readOnly=cp.Doc.GetBoolean("editorReadOnly");
 
 					cp.Doc.AddHeadStyleLink("/codemirror-5.52.0/lib/codemirror.css");
 					cp.Doc.AddHeadStyleLink("/codemirror-5.52.0/addon/display/fullscreen.css");
@@ -330,7 +330,7 @@
 					editorName=cp.Doc.GetText('editorName');
 					editorValue=cp.Doc.GetText('editorValue');
 					editorValue=cp.Utils.EncodeHTML(editorValue);
-					var readOnly=cp.Doc.GetBoolean("readOnly");
+					var readOnly=cp.Doc.GetBoolean("editorReadOnly");
 					//
 					cp.Doc.AddHeadStyleLink("/codemirror-5.52.0/lib/codemirror.css");
 					cp.Doc.AddHeadStyleLink("/codemirror-5.52.0/addon/display/fullscreen.css");
