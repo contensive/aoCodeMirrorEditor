@@ -25,7 +25,7 @@ namespace Contensive.CodeMirrorEditor.Views {
                 //
                 string result = "" +
                     $"<div class=codeMirrorEditor>" +
-                    $"<textarea id=\"{editorId}\" name=\"{editorName}\" rows=\"30\">{editorValue}</textarea>" +
+                    $"<textarea id=\"{editorId}\" name=\"{editorName}\" rows=\"5\">{editorValue}</textarea>" +
                     $"</div>" +
                     $"<script type=\"text/javascript\">" +
                     $"document.addEventListener(\"DOMContentLoaded\", function(event){{" +
