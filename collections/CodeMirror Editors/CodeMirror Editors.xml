@@ -4,7 +4,21 @@
 	<Help></Help>
 	<Addon name="CodeMirror Common Include" guid="{597edb24-c2a0-4317-beec-ad25fd46eb73}" type="Add-on">
 		<JavascriptInHead><![CDATA[
-			function initCodeMirrorHtmlEditor( textAreaId, readOnly ) {
+			// init editor when ready
+			console.log('onReadyInitCodeMirrorEditor declare');
+			function onReadyInitCodeMirrorEditor(textAreaId, readOnly) {
+				console.log('onReadyInitCodeMirrorEditor called');
+				if (document.readyState === "complete" || document.readyState === "interactive") {
+					// Call the callback immediately with the argument if the document is ready
+					initCodeMirrorEditor(textAreaId, readOnly);
+				} else {
+					// Otherwise, wait for the DOMContentLoaded event and pass the argument
+					document.addEventListener("DOMContentLoaded", () => initCodeMirrorEditor(textAreaId, readOnly));
+				}
+			}
+			// init editor
+			function initCodeMirrorEditor( textAreaId, readOnly ) {
+				console.log('initCodeMirrorEditor called');
 				var textArea = document.getElementById( textAreaId );
 				CodeMirror.fromTextArea( textArea, {
 					readOnly: (readOnly) ? "nocursor" : false,

@@ -27,11 +27,7 @@ namespace Contensive.CodeMirrorEditor.Views {
                     $"<div class=codeMirrorEditor>" +
                     $"<textarea id=\"{editorId}\" name=\"{editorName}\" rows=\"30\">{editorValue}</textarea>" +
                     $"</div>" +
-                    $"<script type=\"text/javascript\">" +
-                    $"document.addEventListener(\"DOMContentLoaded\", function(event){{" +
-                        $"initCodeMirrorHtmlEditor(\"{editorId}\",{(readOnly ? "true" : "false")});" +
-                    $"}});" +
-                    $"</script>";
+                    $"<script type=\"text/javascript\">onReadyInitCodeMirrorEditor(\"{editorId}\",{(readOnly ? "true" : "false")});</script>";
                 return result;
             } catch (Exception ex) {
                 cp.Site.ErrorReport(ex);
