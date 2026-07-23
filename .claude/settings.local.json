@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dotnet nuget list source:*)",
+      "Bash(dotnet package search:*)",
+      "Bash(dotnet build:*)"
+    ]
+  }
+}

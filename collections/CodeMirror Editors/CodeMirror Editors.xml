@@ -62,9 +62,7 @@
 	<Addon name="CodeMirror Css Editor" guid="{480220ee-8ad2-4952-8a75-6373d8195e35}" type="Add-on">
 		<DotNetClass><![CDATA[Contensive.CodeMirrorEditor.Views.CodeMirrorCssEditorRemote]]></DotNetClass>
 		<IncludeAddon name="CodeMirror Common Include" guid="{597edb24-c2a0-4317-beec-ad25fd46eb73}"/>
-		<Scripting Language="" EntryPoint="" Timeout="5000">
-			<Code> </Code>
-		</Scripting>
+		<Scripting Language="" EntryPoint="" Timeout="5000"/>
 		<Editors>
 			<type>CSS File</type>
 		</Editors>
@@ -72,9 +70,7 @@
 	<Addon name="CodeMirror Html Editor" guid="{A63ED2BC-1523-41BD-B3B0-A4450944DD26}" type="Add-on">
 		<DotNetClass><![CDATA[Contensive.CodeMirrorEditor.Views.CodeMirrorHtmlEditorRemote]]></DotNetClass>
 		<IncludeAddon name="CodeMirror Common Include" guid="{597edb24-c2a0-4317-beec-ad25fd46eb73}"/>
-		<Scripting Language="" EntryPoint="" Timeout="5000">
-			<Code> </Code>
-		</Scripting>
+		<Scripting Language="" EntryPoint="" Timeout="5000"/>
 		<Editors>
 			<type>HTML Code</type>
 			<type>HTML Code File</type>
@@ -83,9 +79,7 @@
 	<Addon name="CodeMirror Javascript Editor" guid="{012718a9-cd2a-49ff-9267-2bc48ace3d57}" type="Add-on">
 		<DotNetClass><![CDATA[Contensive.CodeMirrorEditor.Views.CodeMirrorJavascriptEditorRemote]]></DotNetClass>
 		<IncludeAddon name="CodeMirror Common Include" guid="{597edb24-c2a0-4317-beec-ad25fd46eb73}"/>
-		<Scripting Language="" EntryPoint="" Timeout="5000">
-			<Code> </Code>
-		</Scripting>
+		<Scripting Language="" EntryPoint="" Timeout="5000"/>
 		<Editors>
 			<type>Javascript File</type>
 		</Editors>
@@ -93,9 +87,7 @@
 	<Addon name="CodeMirror Text Editor" guid="{5cd1927d-4611-4c92-981e-1c58bca0a915}" type="Add-on">
 		<DotNetClass><![CDATA[Contensive.CodeMirrorEditor.Views.CodeMirrorTextEditorRemote]]></DotNetClass>
 		<IncludeAddon name="CodeMirror Common Include" guid="{597edb24-c2a0-4317-beec-ad25fd46eb73}"/>
-		<Scripting Language="" EntryPoint="" Timeout="5000">
-			<Code> </Code>
-		</Scripting>
+		<Scripting Language="" EntryPoint="" Timeout="5000"/>
 		<Editors>
 			<type>LongText</type>
 			<type>TextFile</type>
@@ -104,13 +96,11 @@
 	<Addon name="CodeMirror Xml Editor" guid="{56a34edf-cf69-48c7-bac4-2b69dad519f8}" type="Add-on">
 		<DotNetClass><![CDATA[Contensive.CodeMirrorEditor.Views.CodeMirrorXmlEditorRemote]]></DotNetClass>
 		<IncludeAddon name="CodeMirror Common Include" guid="{597edb24-c2a0-4317-beec-ad25fd46eb73}"/>
-		<Scripting Language="" EntryPoint="" Timeout="5000">
-			<Code> </Code>
-		</Scripting>
+		<Scripting Language="" EntryPoint="" Timeout="5000"/>
 
 		<Editors>
 			<type>XML File</type>
 		</Editors>
 	</Addon>
-	<Resource name="codemirror-5.52.0.zip" type="www" path="" />
+	<Resource name="wwwFiles.zip" type="wwwFiles" />
 </Collection>
