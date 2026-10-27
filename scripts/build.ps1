@@ -11,7 +11,7 @@ Import-Module (Join-Path $PSScriptRoot '..\..\Contensive5\scripts\build-addon-co
 $projectRoot = (Resolve-Path "$PSScriptRoot\..").Path
 
 # Display build info
-$version = Get-ContensiveVersion -DeploymentRoot 'C:\Deployments\aoCodeMirrorEditor'
+$version = Get-ContensiveVersion -DeploymentRoot 'C:\Deployments\aoCodeMirrorEditor' -RepoPath $projectRoot
 Write-Host ""
 Write-Host "========================================"
 Write-Host "  CodeMirror Editors Build"
